@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title> Evento Formularios </title>
+</head>
+<body>
+    <!-- Eventos Formulários
+        - onfocus = Recebe o Foco
+        - onblur = Perde o Foco
+        - onchange = Quando muda o estado do elemento
+     -->
+    <input type="text" onfocus="acao()" onblur="acao2">
+
+
+    <select onchange="acao()">
+        <option>...</option>
+        <option value="1">Opção 01</option>
+        <option value="2">Opção 02</option>
+    </select>
+
+    <script>
+        function acao(){console.log('Evento disparado')}
+        function acao2(){console.log('Evento Blur disparado')}
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Manipulado Valores </title>
+</head>
+<body>
+    <input id="entrada" onkeyup="distribuicaracter()" type="text" placeholder="Digite um caracter">
+    <hr>
+
+    <span>Letras:</span>
+    <input type="text"  id="apenas_letras" disabled>
+
+    <span>Números:</span>
+    <input type="text" id="apenas_numeros" disabled>
+
+    <script>
+        function distribuicaracter(){
+            //Selecionei o campoo e armazenei o valor do campo
+            let caracter = document.getElementById('entrada').value
+            console.log (caracter) //String
+
+            //Apagar o valor do campo
+            document.getElementById('entrada').value = ''
+
+            switch(caracter){
+                case '0': 
+                case '1': 
+                case '2': 
+                case '3': 
+                case '4': 
+                case '5': 
+                case '6': 
+                case '7': 
+                case '8': 
+                case '9': 
+                document.getElementById('apenas_numeros').value += caracter
+                // console.log('Digitou um número')
+                break
+                default:
+                    document.getElementById('apenas_letras').value += caracter
+                    // console.log('Digitou uma letra')
+            }
+        }
+    </script>
+</body>
+</html>
